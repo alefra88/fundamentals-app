@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, output, Output } from '@angular/core';
 import { ComponentePadreComponent } from '../componente-padre/componente-padre.component';
 import { MatCard } from '@angular/material/card';
 @Component({
@@ -10,9 +10,14 @@ import { MatCard } from '@angular/material/card';
   styleUrl: './componente-hijo.component.css'
 })
 export class ComponenteHijoComponent {
-@Output()
-login:EventEmitter<string>= new EventEmitter<string>;
-  userName: string = 'AlanDev';
+
+// @Output()
+// login:EventEmitter<string>= new EventEmitter<string>;
+  
+userName: string = 'AlanDev';
+
+login = output<string>();
+  
   handleLogin(){
     this.login.emit(this.userName);
   }

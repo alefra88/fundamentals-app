@@ -8,7 +8,9 @@ import { ComponenteHijoComponent } from "../componente-hijo/componente-hijo.comp
   styleUrl: './componente-padre.component.css'
 })
 export class ComponentePadreComponent {
+  
   name: string = '';
+
   setName(e:string){
     this.name = e;
   }

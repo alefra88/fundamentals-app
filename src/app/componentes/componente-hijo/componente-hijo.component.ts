@@ -1,6 +1,7 @@
 import { Component, EventEmitter, output, Output } from '@angular/core';
 import { ComponentePadreComponent } from '../componente-padre/componente-padre.component';
 import { MatCard } from '@angular/material/card';
+import { ProductoEjem } from '../../interfaces/ProductoEjem';
 @Component({
   selector: 'app-componente-hijo',
   imports: [
@@ -16,9 +17,16 @@ export class ComponenteHijoComponent {
   
 userName: string ;
 
+producto: ProductoEjem;
+
 //usamos el constructor para inicializar variables que tengamos en esta clase
 constructor(){
   this.userName = 'AlanDev';
+  this.producto = {
+    name:"compu",
+    price:1,
+    isForSale: true
+  }
 }
 
 login = output<string>();

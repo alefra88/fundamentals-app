@@ -1,4 +1,4 @@
-<!-- @for(producto of producto(); track $index)
+<!-- @for(producto of productos(); track $index)
 {
 <div class="producto-card">
     <img [src]="producto.image" [alt]="producto.title" class="producto-img" width="200" />
@@ -12,11 +12,8 @@
       </div>
     </div>
   </div>
-}
- -->
-<h1>{{msg()}}</h1>
-//renderizamos info desde componente padre
-<div>{{person().sex}} - {{person().age}}</div>
+} -->
+
  <ul>
     @for(producto of productos(); track $index)
     {

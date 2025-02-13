@@ -3,3 +3,25 @@
 <h2 [ngClass]="{dark:isDark}">Holas!</h2>
 
 <button (click)="toggleDark()">Toggle Dark</button>
+
+
+<h1>Reactive form</h1>
+
+<form [formGroup]="movieForm" (submit)="handleSubmit()">
+    <fieldset>
+        <label for="movie-name">Movie name: </label>
+        <input type="text" id="movie-name" formControlName="name" >
+    </fieldset>
+
+    <fieldset>
+        <label for="movie-duration">Movie duration: </label>
+        <input type="text" id="movie-duration" formControlName="duration" >
+    </fieldset>
+
+    <fieldset>
+        <label for="movie-director">Movie director: </label>
+        <input type="text" id="movie-directo" formControlName="director" >
+    </fieldset>
+
+    <button>Create movie</button>
+</form>

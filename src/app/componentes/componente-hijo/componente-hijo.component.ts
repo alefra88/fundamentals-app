@@ -14,7 +14,12 @@ export class ComponenteHijoComponent {
 // @Output()
 // login:EventEmitter<string>= new EventEmitter<string>;
   
-userName: string = 'AlanDev';
+userName: string ;
+
+//usamos el constructor para inicializar variables que tengamos en esta clase
+constructor(){
+  this.userName = 'AlanDev';
+}
 
 login = output<string>();
   

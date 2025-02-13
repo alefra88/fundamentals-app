@@ -1,0 +1,29 @@
+<!-- @for(producto of producto(); track $index)
+{
+<div class="producto-card">
+    <img [src]="producto.image" [alt]="producto.title" class="producto-img" width="200" />
+    <div class="producto-info">
+      <h2>{{ producto.title }}</h2>
+      <p class="producto-precio">Precio: ${{ producto.price }}</p>
+      <p class="producto-descripcion">{{ producto.description }}</p>
+      <p class="producto-categoria">Categoría: {{ producto.category }}</p>
+      <div class="producto-rating">
+        <span>⭐ {{ producto.rating.rate }} ({{ producto.rating.count }} opiniones)</span>
+      </div>
+    </div>
+  </div>
+}
+ -->
+<h1>{{msg()}}</h1>
+//renderizamos info desde componente padre
+<div>{{person().sex}} - {{person().age}}</div>
+ <ul>
+    @for(producto of productos(); track $index)
+    {
+      <li>
+        <img [src]="producto.image" alt="{{producto.title}}" width="50">
+        <h3>{{producto.title}}</h3>
+        <p>Precio: {{producto.price }}</p>
+      </li>
+    }
+  </ul>

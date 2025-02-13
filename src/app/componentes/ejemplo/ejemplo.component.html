@@ -1,0 +1,41 @@
+<h1>Hola {{userName}}</h1>
+
+
+<input type="text" [value]="userName">
+<h3></h3>
+<button (click)="addOne()">Presioname</button>
+<h1>Number: {{contador}}</h1>
+<h3></h3>
+
+<h1>{{doubleDataBinding}}</h1>
+<input type="text"[(ngModel)]="doubleDataBinding" (input)="addOne()">
+
+
+<h2>Renderizado dinamico</h2>
+
+@if(condicion){
+    <h3>Hola soy un mensaje oculto de la condiucion 1</h3>
+}
+
+@else if (!condicion2) {
+    <h2>La condicion 2 se cumple</h2>
+}
+@else {
+    <h3>Las condiciones no se cumplieron lol</h3>
+}
+
+
+<h1>BLOQUE &#64;FOR</h1>
+
+@for (movie of movies; track $index) {
+    <h4>{{$index+1}} {{movie}}</h4>
+}
+
+
+
+<h1>TOggle material</h1>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+
+
+<app-componente-lista [msg]="text" [person]="person"></app-componente-lista>

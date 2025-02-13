@@ -3,3 +3,7 @@
     color: aliceblue;
 }
 
+.form-error{
+    background-color: red;
+    color: azure;
+}

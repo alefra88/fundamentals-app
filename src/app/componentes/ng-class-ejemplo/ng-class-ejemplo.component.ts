@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-ng-class-ejemplo',
@@ -22,20 +22,21 @@ export class NgClassEjemploComponent {
   movieForm: FormGroup;
   name:FormControl;
   duration: FormControl;
+  maxDuration:number=150;
   director: FormControl;
 
   constructor(){
-    this.name = new FormControl('');
-    this.duration =  new FormControl('');
+    this.name = new FormControl('', Validators.required);
+    this.duration =  new FormControl('', [Validators.required,Validators.max(this.maxDuration)]);
     this.director = new FormControl('');
-
     this.movieForm = new FormGroup({
       name: this.name,
       duration: this.duration,
-      director: this.director
+      director: this.director,
     })
   }
   handleSubmit(): void {
-    console.log(this.movieForm);
+    console.log("movie created:", this.movieForm.value);
+    this.movieForm.reset();
   }
 }

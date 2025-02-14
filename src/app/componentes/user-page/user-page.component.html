@@ -1,0 +1,9 @@
+@for(user of user(); track $index){
+<h1>{{user.name}}</h1>
+<a [routerLink]="[user.id]">ID {{user.id}}</a>
+<p>Email: {{ user.email }}</p>
+  <p>Phone: {{ user.phone }}</p>
+  <p>Website: {{ user.website }}</p>
+  <p>Company: {{ user.company.name }}</p>
+  <p>Address: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}, {{ user.address.zipcode }}</p>
+}

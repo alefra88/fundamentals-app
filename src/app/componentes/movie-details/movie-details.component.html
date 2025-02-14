@@ -1,0 +1,7 @@
+@if(selectedProducto()){
+    <h1>{{selectedProducto()?.title}}</h1>
+    <h2>ID: {{selectedProducto()?.id}}</h2>
+}
+@else {
+    <h1>No se encontro nada</h1>
+}
